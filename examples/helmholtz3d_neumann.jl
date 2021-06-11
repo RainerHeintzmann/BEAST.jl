@@ -1,6 +1,7 @@
-using CompScienceMeshes, BEAST
+using CompScienceMeshes, BEAST, LinearAlgebra
 
-Γ = readmesh(joinpath(@__DIR__,"sphere2.in"))
+d = dirname(pathof(BEAST)) * "/../examples"
+Γ = readmesh(joinpath(d,"sphere2.in"))
 X = lagrangec0d1(Γ)
 @show numfunctions(X)
 
